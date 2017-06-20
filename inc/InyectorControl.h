@@ -4,7 +4,7 @@
 
 /* -------------------------- Development history -------------------------- */
 /*
- *  LeFr  Leandro Francucci  francuccilea@gmail.com
+ *  2017.06.20  LeFr  v2.4.05  Initial version
  */
 
 /* -------------------------------- Authors -------------------------------- */
