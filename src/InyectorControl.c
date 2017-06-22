@@ -26,16 +26,19 @@ static int state;
 
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Global functions --------------------------- */
-void 
+int 
 InyectorControl_init(void)
 {
     state = off; 
     InyectorControlAct_init();
+    return state;
 }
 
 int
 InyectorControl_dispatch(Event *event)
 {
+    int result;
+
     switch (state)
     {
         case off:
@@ -43,18 +46,22 @@ InyectorControl_dispatch(Event *event)
             {
                 InyectorControlAct_starting(event);
                 state = starting;
+                result = state;
             }
+            result = UNHANDLED_EVENT;
             break;
         case starting:
             if (event->signal == evStartTimeout)
             {
                 state = idleSpeed;
+                result = state;
             }
+            result = UNHANDLED_EVENT;
             break;
         case idleSpeed:
             if (event->signal == evTick)
             {
-                if (isReleasedThrottle())
+                if (InyectorControlAct_isReleasedThrottle())
                 {
                     InyectorControlAct_onIdleSpeed(event);
                 }
@@ -62,12 +69,14 @@ InyectorControl_dispatch(Event *event)
                 {
                     state = normal;
                 }
+                result = state;
             }
+            result = UNHANDLED_EVENT;
             break;
         case normal:
             if (event->signal == evTick)
             {
-                if (isPressedThrottle())
+                if (InyectorControlAct_isPressedThrottle())
                 {
                     InyectorControlAct_onNormal(event);
                 }
@@ -75,12 +84,14 @@ InyectorControl_dispatch(Event *event)
                 {
                     state = idleSpeed;
                 }
+                result = state;
             }
+            result = UNHANDLED_EVENT;
             break;
         default:
             break;
     }
-    return state;
+    return result;
 }
 
 void 

@@ -91,15 +91,15 @@ InyectorControlAct_onNormal(Event *event)
 bool 
 InyectorControlAct_isPressedThrottle(Event *event)
 {
-    throttleval = sensor_get(throttle);
-    return throttleval > THROTTLE_MIN;
+    throttleVal = Sensor_get(throttle);
+    return throttleVal > THROTTLE_MIN;
 }
 
 bool 
 InyectorControlAct_isReleasedThrottle(Event *event)
 {
-    throttleval = sensor_get(throttle);
-    return throttleval <= THROTTLE_MIN;
+    throttleVal  = Sensor_get(throttle);
+    return throttleVal <= THROTTLE_MIN;
 }
 
 

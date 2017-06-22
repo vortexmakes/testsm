@@ -46,7 +46,7 @@ struct Event
  
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
-void InyectorControl_init(void);
+int InyectorControl_init(void);
 int InyectorControl_dispatch(Event *event);
 void InyectorControl_setState(int currState);
 int InyectorControl_getState(void);
