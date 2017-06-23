@@ -18,7 +18,7 @@
 #define __INYECTORCONTROLACT_H__
  
 /* ----------------------------- Include files ----------------------------- */
-#include "InyectionControl.h"
+#include "InyectorControl.h"
 
 /* ---------------------- External C language linkage ---------------------- */
 #ifdef __cplusplus
