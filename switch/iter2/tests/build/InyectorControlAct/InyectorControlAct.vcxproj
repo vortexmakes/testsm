@@ -83,6 +83,7 @@
     <ClCompile Include="..\..\..\src\InyectorControlAct.c" />
     <ClCompile Include="..\..\InyectorControlAct\runner\all_tests.c" />
     <ClCompile Include="..\..\InyectorControlAct\runner\test_InyectorControlAct_runner.c" />
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_PWMInyector.c" />
     <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_Timer.c" />
     <ClCompile Include="..\..\InyectorControlAct\test_InyectorControlAct.c" />
   </ItemGroup>

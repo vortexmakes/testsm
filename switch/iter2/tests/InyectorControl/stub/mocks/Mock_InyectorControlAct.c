@@ -6,6 +6,7 @@
 #include "cmock.h"
 #include "Mock_InyectorControlAct.h"
 
+static const char* CMockString_InyectorControlAct_entryIdleSpeed = "InyectorControlAct_entryIdleSpeed";
 static const char* CMockString_InyectorControlAct_init = "InyectorControlAct_init";
 static const char* CMockString_InyectorControlAct_starting = "InyectorControlAct_starting";
 static const char* CMockString_event = "event";
@@ -24,6 +25,14 @@ typedef struct _CMOCK_InyectorControlAct_starting_CALL_INSTANCE
 
 } CMOCK_InyectorControlAct_starting_CALL_INSTANCE;
 
+typedef struct _CMOCK_InyectorControlAct_entryIdleSpeed_CALL_INSTANCE
+{
+  UNITY_LINE_TYPE LineNumber;
+  Event* Expected_event;
+  int IgnoreArg_event;
+
+} CMOCK_InyectorControlAct_entryIdleSpeed_CALL_INSTANCE;
+
 static struct Mock_InyectorControlActInstance
 {
   int InyectorControlAct_init_IgnoreBool;
@@ -34,6 +43,10 @@ static struct Mock_InyectorControlActInstance
   CMOCK_InyectorControlAct_starting_CALLBACK InyectorControlAct_starting_CallbackFunctionPointer;
   int InyectorControlAct_starting_CallbackCalls;
   CMOCK_MEM_INDEX_TYPE InyectorControlAct_starting_CallInstance;
+  int InyectorControlAct_entryIdleSpeed_IgnoreBool;
+  CMOCK_InyectorControlAct_entryIdleSpeed_CALLBACK InyectorControlAct_entryIdleSpeed_CallbackFunctionPointer;
+  int InyectorControlAct_entryIdleSpeed_CallbackCalls;
+  CMOCK_MEM_INDEX_TYPE InyectorControlAct_entryIdleSpeed_CallInstance;
 } Mock;
 
 extern jmp_buf AbortFrame;
@@ -53,6 +66,12 @@ void Mock_InyectorControlAct_Verify(void)
   UNITY_TEST_ASSERT(CMOCK_GUTS_NONE == Mock.InyectorControlAct_starting_CallInstance, cmock_line, CMockStringCalledLess);
   if (Mock.InyectorControlAct_starting_CallbackFunctionPointer != NULL)
     Mock.InyectorControlAct_starting_CallInstance = CMOCK_GUTS_NONE;
+  if (Mock.InyectorControlAct_entryIdleSpeed_IgnoreBool)
+    Mock.InyectorControlAct_entryIdleSpeed_CallInstance = CMOCK_GUTS_NONE;
+  UNITY_SET_DETAIL(CMockString_InyectorControlAct_entryIdleSpeed);
+  UNITY_TEST_ASSERT(CMOCK_GUTS_NONE == Mock.InyectorControlAct_entryIdleSpeed_CallInstance, cmock_line, CMockStringCalledLess);
+  if (Mock.InyectorControlAct_entryIdleSpeed_CallbackFunctionPointer != NULL)
+    Mock.InyectorControlAct_entryIdleSpeed_CallInstance = CMOCK_GUTS_NONE;
 }
 
 void Mock_InyectorControlAct_Init(void)
@@ -68,6 +87,8 @@ void Mock_InyectorControlAct_Destroy(void)
   Mock.InyectorControlAct_init_CallbackCalls = 0;
   Mock.InyectorControlAct_starting_CallbackFunctionPointer = NULL;
   Mock.InyectorControlAct_starting_CallbackCalls = 0;
+  Mock.InyectorControlAct_entryIdleSpeed_CallbackFunctionPointer = NULL;
+  Mock.InyectorControlAct_entryIdleSpeed_CallbackCalls = 0;
 }
 
 void InyectorControlAct_init(void)
@@ -173,6 +194,69 @@ void InyectorControlAct_starting_StubWithCallback(CMOCK_InyectorControlAct_start
 void InyectorControlAct_starting_CMockIgnoreArg_event(UNITY_LINE_TYPE cmock_line)
 {
   CMOCK_InyectorControlAct_starting_CALL_INSTANCE* cmock_call_instance = (CMOCK_InyectorControlAct_starting_CALL_INSTANCE*)CMock_Guts_GetAddressFor(CMock_Guts_MemEndOfChain(Mock.InyectorControlAct_starting_CallInstance));
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringIgnPreExp);
+  cmock_call_instance->IgnoreArg_event = 1;
+}
+
+void InyectorControlAct_entryIdleSpeed(Event* event)
+{
+  UNITY_LINE_TYPE cmock_line = TEST_LINE_NUM;
+  CMOCK_InyectorControlAct_entryIdleSpeed_CALL_INSTANCE* cmock_call_instance;
+  UNITY_SET_DETAIL(CMockString_InyectorControlAct_entryIdleSpeed);
+  cmock_call_instance = (CMOCK_InyectorControlAct_entryIdleSpeed_CALL_INSTANCE*)CMock_Guts_GetAddressFor(Mock.InyectorControlAct_entryIdleSpeed_CallInstance);
+  Mock.InyectorControlAct_entryIdleSpeed_CallInstance = CMock_Guts_MemNext(Mock.InyectorControlAct_entryIdleSpeed_CallInstance);
+  if (Mock.InyectorControlAct_entryIdleSpeed_IgnoreBool)
+  {
+    UNITY_CLR_DETAILS();
+    return;
+  }
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringCalledMore);
+  cmock_line = cmock_call_instance->LineNumber;
+  if (!cmock_call_instance->IgnoreArg_event)
+  {
+    UNITY_SET_DETAILS(CMockString_InyectorControlAct_entryIdleSpeed,CMockString_event);
+    UNITY_TEST_ASSERT_EQUAL_PTR(cmock_call_instance->Expected_event, event, cmock_line, CMockStringMismatch);
+  }
+  if (Mock.InyectorControlAct_entryIdleSpeed_CallbackFunctionPointer != NULL)
+  {
+    Mock.InyectorControlAct_entryIdleSpeed_CallbackFunctionPointer(event, Mock.InyectorControlAct_entryIdleSpeed_CallbackCalls++);
+  }
+  UNITY_CLR_DETAILS();
+}
+
+void CMockExpectParameters_InyectorControlAct_entryIdleSpeed(CMOCK_InyectorControlAct_entryIdleSpeed_CALL_INSTANCE* cmock_call_instance, Event* event)
+{
+  cmock_call_instance->Expected_event = event;
+  cmock_call_instance->IgnoreArg_event = 0;
+}
+
+void InyectorControlAct_entryIdleSpeed_CMockIgnore(void)
+{
+  Mock.InyectorControlAct_entryIdleSpeed_IgnoreBool = (int)1;
+}
+
+void InyectorControlAct_entryIdleSpeed_CMockExpect(UNITY_LINE_TYPE cmock_line, Event* event)
+{
+  CMOCK_MEM_INDEX_TYPE cmock_guts_index = CMock_Guts_MemNew(sizeof(CMOCK_InyectorControlAct_entryIdleSpeed_CALL_INSTANCE));
+  CMOCK_InyectorControlAct_entryIdleSpeed_CALL_INSTANCE* cmock_call_instance = (CMOCK_InyectorControlAct_entryIdleSpeed_CALL_INSTANCE*)CMock_Guts_GetAddressFor(cmock_guts_index);
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringOutOfMemory);
+  memset(cmock_call_instance, 0, sizeof(*cmock_call_instance));
+  Mock.InyectorControlAct_entryIdleSpeed_CallInstance = CMock_Guts_MemChain(Mock.InyectorControlAct_entryIdleSpeed_CallInstance, cmock_guts_index);
+  Mock.InyectorControlAct_entryIdleSpeed_IgnoreBool = (int)0;
+  cmock_call_instance->LineNumber = cmock_line;
+  CMockExpectParameters_InyectorControlAct_entryIdleSpeed(cmock_call_instance, event);
+  UNITY_CLR_DETAILS();
+}
+
+void InyectorControlAct_entryIdleSpeed_StubWithCallback(CMOCK_InyectorControlAct_entryIdleSpeed_CALLBACK Callback)
+{
+  Mock.InyectorControlAct_entryIdleSpeed_IgnoreBool = (int)0;
+  Mock.InyectorControlAct_entryIdleSpeed_CallbackFunctionPointer = Callback;
+}
+
+void InyectorControlAct_entryIdleSpeed_CMockIgnoreArg_event(UNITY_LINE_TYPE cmock_line)
+{
+  CMOCK_InyectorControlAct_entryIdleSpeed_CALL_INSTANCE* cmock_call_instance = (CMOCK_InyectorControlAct_entryIdleSpeed_CALL_INSTANCE*)CMock_Guts_GetAddressFor(CMock_Guts_MemEndOfChain(Mock.InyectorControlAct_entryIdleSpeed_CallInstance));
   UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringIgnPreExp);
   cmock_call_instance->IgnoreArg_event = 1;
 }

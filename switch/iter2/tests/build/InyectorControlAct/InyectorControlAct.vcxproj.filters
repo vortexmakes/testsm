@@ -42,5 +42,8 @@
     <ClCompile Include="..\..\InyectorControlAct\runner\all_tests.c">
       <Filter>test\runner</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_PWMInyector.c">
+      <Filter>test\stub</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

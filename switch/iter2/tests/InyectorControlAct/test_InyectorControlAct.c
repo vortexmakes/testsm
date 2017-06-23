@@ -47,7 +47,7 @@ TEST_TEAR_DOWN(Behavior)
 
 TEST(Behavior, SetInitialValuesAfterInit)
 {
-    Timer *tmr;
+    Timer *tmr = (Timer *)0xdeadbeef;
 
     PWMInyector_init_Expect();
     Timer_init_ExpectAndReturn(START_TIME, 0, evStartTimeout, tmr);
@@ -57,7 +57,7 @@ TEST(Behavior, SetInitialValuesAfterInit)
 
 TEST(Behavior, SetDutyTo50ForAWhileOnStart)
 {
-    Timer *tmr;
+    Timer *tmr = (Timer *)0xdeadbeef;
     event.signal = evStart;
 
     Timer_start_Expect(tmr);

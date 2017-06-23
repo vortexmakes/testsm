@@ -34,5 +34,13 @@ typedef void (* CMOCK_InyectorControlAct_starting_CALLBACK)(Event* event, int cm
 void InyectorControlAct_starting_StubWithCallback(CMOCK_InyectorControlAct_starting_CALLBACK Callback);
 #define InyectorControlAct_starting_IgnoreArg_event() InyectorControlAct_starting_CMockIgnoreArg_event(__LINE__)
 void InyectorControlAct_starting_CMockIgnoreArg_event(UNITY_LINE_TYPE cmock_line);
+#define InyectorControlAct_entryIdleSpeed_Ignore() InyectorControlAct_entryIdleSpeed_CMockIgnore()
+void InyectorControlAct_entryIdleSpeed_CMockIgnore(void);
+#define InyectorControlAct_entryIdleSpeed_Expect(event) InyectorControlAct_entryIdleSpeed_CMockExpect(__LINE__, event)
+void InyectorControlAct_entryIdleSpeed_CMockExpect(UNITY_LINE_TYPE cmock_line, Event* event);
+typedef void (* CMOCK_InyectorControlAct_entryIdleSpeed_CALLBACK)(Event* event, int cmock_num_calls);
+void InyectorControlAct_entryIdleSpeed_StubWithCallback(CMOCK_InyectorControlAct_entryIdleSpeed_CALLBACK Callback);
+#define InyectorControlAct_entryIdleSpeed_IgnoreArg_event() InyectorControlAct_entryIdleSpeed_CMockIgnoreArg_event(__LINE__)
+void InyectorControlAct_entryIdleSpeed_CMockIgnoreArg_event(UNITY_LINE_TYPE cmock_line);
 
 #endif
