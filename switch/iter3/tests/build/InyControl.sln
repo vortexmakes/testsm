@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InyControl", "InyControl.vcxproj", "{9DBF06F4-0E73-488D-A747-E4CE5ABF4A0C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InyectorControl", "InyectorControl\InyectorControl.vcxproj", "{B2BD942C-EBF0-40A2-97CB-4B2A5F867566}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InyectorControlAct", "InyectorControlAct\InyectorControlAct.vcxproj", "{F90BCBF5-F5AF-49DD-9EE9-6E80A801DBB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DBF06F4-0E73-488D-A747-E4CE5ABF4A0C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9DBF06F4-0E73-488D-A747-E4CE5ABF4A0C}.Debug|Win32.Build.0 = Debug|Win32
+		{9DBF06F4-0E73-488D-A747-E4CE5ABF4A0C}.Release|Win32.ActiveCfg = Release|Win32
+		{9DBF06F4-0E73-488D-A747-E4CE5ABF4A0C}.Release|Win32.Build.0 = Release|Win32
+		{B2BD942C-EBF0-40A2-97CB-4B2A5F867566}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B2BD942C-EBF0-40A2-97CB-4B2A5F867566}.Debug|Win32.Build.0 = Debug|Win32
+		{B2BD942C-EBF0-40A2-97CB-4B2A5F867566}.Release|Win32.ActiveCfg = Release|Win32
+		{B2BD942C-EBF0-40A2-97CB-4B2A5F867566}.Release|Win32.Build.0 = Release|Win32
+		{F90BCBF5-F5AF-49DD-9EE9-6E80A801DBB2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F90BCBF5-F5AF-49DD-9EE9-6E80A801DBB2}.Debug|Win32.Build.0 = Debug|Win32
+		{F90BCBF5-F5AF-49DD-9EE9-6E80A801DBB2}.Release|Win32.ActiveCfg = Release|Win32
+		{F90BCBF5-F5AF-49DD-9EE9-6E80A801DBB2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
