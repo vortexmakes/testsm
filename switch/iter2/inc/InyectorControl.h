@@ -14,7 +14,7 @@
 
 /* --------------------------------- Notes --------------------------------- */
 /* --------------------------------- Module -------------------------------- */
-#ifdef __INYECTORCONTROL_H__
+#ifndef __INYECTORCONTROL_H__
 #define __INYECTORCONTROL_H__
  
 /* ----------------------------- Include files ----------------------------- */
@@ -25,7 +25,7 @@ extern "C" {
 
 /* --------------------------------- Macros -------------------------------- */
 /* -------------------------------- Constants ------------------------------ */
-#define START_TIME          2       /* In seconds */
+#define START_TIME          2000    /* In milliseconds */
 #define START_DUTY          50      /* In percentage */
 #define IDLE_MIN_DUTY       20      /* In percentage */
 #define IDLE_MAX_DUTY       30      /* In percentage */
@@ -37,6 +37,8 @@ extern "C" {
 #define INC_DUTY_FOR_COLD   10      /* In percentage */
 #define TICK_TIME           100     /* In milliseconds */
 #define ENGINE_MIN_TEMP     70      /* In Celcius */
+
+#define UNHANDLED_EVENT     (-1)
 
 /* States */
 enum

@@ -25,7 +25,7 @@ extern "C" {
 
 /* --------------------------------- Macros -------------------------------- */
 /* -------------------------------- Constants ------------------------------ */
-#define START_TIME          2       /* In seconds */
+#define START_TIME          2000    /* In milliseconds */
 #define START_DUTY          50      /* In percentage */
 #define IDLE_MIN_DUTY       20      /* In percentage */
 #define IDLE_MAX_DUTY       30      /* In percentage */

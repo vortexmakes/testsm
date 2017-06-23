@@ -14,7 +14,7 @@
 
 /* --------------------------------- Notes --------------------------------- */
 /* --------------------------------- Module -------------------------------- */
-#ifdef __INYECTORCONTROL_H__
+#ifndef __INYECTORCONTROL_H__
 #define __INYECTORCONTROL_H__
  
 /* ----------------------------- Include files ----------------------------- */
@@ -37,6 +37,8 @@ extern "C" {
 #define INC_DUTY_FOR_COLD   10      /* In percentage */
 #define TICK_TIME           100     /* In milliseconds */
 #define ENGINE_MIN_TEMP     70      /* In Celcius */
+
+#define UNHANDLED_EVENT     (-1)
 
 /* States */
 enum
