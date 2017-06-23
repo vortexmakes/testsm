@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="production">
+      <UniqueIdentifier>{4c979618-164e-4805-a838-d3dbe071751f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{837cecf2-f9de-4ea9-ad2c-e71f4a8115b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\runner">
+      <UniqueIdentifier>{8d6825cd-8e83-4e78-b61d-43412fc9a98b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\stub">
+      <UniqueIdentifier>{8e6ac1e9-bffd-4851-86c5-024ce0ae04f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\tool">
+      <UniqueIdentifier>{28a85577-d8ab-45ce-a2ed-7d3ff2faf342}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\third-party\ceedling\vendor\cmock\src\cmock.c">
+      <Filter>test\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\third-party\ceedling\vendor\unity\src\unity.c">
+      <Filter>test\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\third-party\ceedling\vendor\unity\extras\fixture\src\unity_fixture.c">
+      <Filter>test\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\InyectorControlAct.c">
+      <Filter>production</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\InyectorControlAct\test_InyectorControlAct.c">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_Timer.c">
+      <Filter>test\stub</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\InyectorControlAct\runner\test_InyectorControlAct_runner.c">
+      <Filter>test\runner</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\InyectorControlAct\runner\all_tests.c">
+      <Filter>test\runner</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

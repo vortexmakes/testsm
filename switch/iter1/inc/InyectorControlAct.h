@@ -14,11 +14,11 @@
 
 /* --------------------------------- Notes --------------------------------- */
 /* --------------------------------- Module -------------------------------- */
-#ifdef __INYECTORCONTROLACT_H__
+#ifndef __INYECTORCONTROLACT_H__
 #define __INYECTORCONTROLACT_H__
  
 /* ----------------------------- Include files ----------------------------- */
-#include "InyectionControl.h"
+#include "InyectorControl.h"
 
 /* ---------------------- External C language linkage ---------------------- */
 #ifdef __cplusplus
