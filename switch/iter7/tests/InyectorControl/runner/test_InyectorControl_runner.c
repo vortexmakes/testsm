@@ -29,6 +29,9 @@ TEST_GROUP_RUNNER(Structure)
 	RUN_TEST_CASE(Structure, AnUnhandledEventDoesNotChangeState);
 	RUN_TEST_CASE(Structure, StateTransitionTableForOff);
 	RUN_TEST_CASE(Structure, StateTransitionTableForStarting);
+	RUN_TEST_CASE(Structure, StateTransitionTableForIdleSpeed);
+	RUN_TEST_CASE(Structure, StateTransitionTableForNormal);
+	RUN_TEST_CASE(Structure, StateTransitionTableForNormal_UnhandledEvents);
 }
 
 /* ------------------------------ End of file ------------------------------ */

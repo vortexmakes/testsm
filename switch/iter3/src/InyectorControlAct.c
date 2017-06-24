@@ -25,20 +25,12 @@
 /* ---------------------------- Local data types --------------------------- */
 /* ---------------------------- Global variables --------------------------- */
 /* ---------------------------- Local variables ---------------------------- */
-static int tempVal, rpmVal, throttleVal;
-static TempSensor *temp;
-static RPMSensor *rpm;
+static int throttleVal;
 static ThrottleSensor *throttle;
 static unsigned char duty;
 static Timer *startTmr;
 
 /* ----------------------- Local function prototypes ----------------------- */
-static void
-calcDutyFromThrottle(int currThrottleVal)
-{
-    return currThrottleVal;
-}
-
 /* ---------------------------- Global functions --------------------------- */
 /* Init action */
 void 
@@ -57,14 +49,14 @@ InyectorControlAct_init(void)
 bool 
 InyectorControlAct_isPressedThrottle(Event *event)
 {
-    throttleVal = Sensor_get(throttle);
+    throttleVal = Sensor_get((Sensor *)throttle);
     return throttleVal > THROTTLE_MIN;
 }
 
 bool 
 InyectorControlAct_isReleasedThrottle(Event *event)
 {
-    throttleVal  = Sensor_get(throttle);
+    throttleVal  = Sensor_get((Sensor *)throttle);
     return throttleVal <= THROTTLE_MIN;
 }
 

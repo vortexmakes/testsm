@@ -67,7 +67,7 @@ InyectorControl_dispatch(Event *event)
         case idleSpeed:
             if (event->signal == evTick)
             {
-                if (InyectorControlAct_isReleasedThrottle())
+                if (InyectorControlAct_isReleasedThrottle(event))
                 {
                     InyectorControlAct_onIdleSpeed(event);
                 }
@@ -85,7 +85,7 @@ InyectorControl_dispatch(Event *event)
         case normal:
             if (event->signal == evTick)
             {
-                if (InyectorControlAct_isPressedThrottle())
+                if (InyectorControlAct_isPressedThrottle(event))
                 {
                     InyectorControlAct_onNormal(event);
                 }

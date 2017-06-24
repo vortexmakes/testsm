@@ -55,8 +55,8 @@ TEST_TEAR_DOWN(Behavior)
 
 TEST(Behavior, SetInitialValuesAfterInit)
 {
-    ThrottleSensor *throttle;
-    Timer *tmr;
+    ThrottleSensor *throttle = (ThrottleSensor *)0xdeadbeef;
+    Timer *tmr = (Timer *)0xdeadbeef;
 
     ThrottleSensor_init_ExpectAndReturn(throttle);
     PWMInyector_init_Expect();
@@ -67,7 +67,7 @@ TEST(Behavior, SetInitialValuesAfterInit)
 
 TEST(Behavior, SetDutyTo50ForAWhileOnStart)
 {
-    Timer *tmr;
+    Timer *tmr = (Timer *)0xdeadbeef;
     event.signal = evStart;
 
     Timer_start_Expect(tmr);
@@ -77,10 +77,19 @@ TEST(Behavior, SetDutyTo50ForAWhileOnStart)
     InyectorControlAct_starting(&event);
 }
 
+TEST(Behavior, SetDutyToMinForIdleSpeed)
+{
+    event.signal = evStartTimeout;
+
+    PWMInyector_setDuty_Expect(IDLE_MIN_DUTY);
+
+    InyectorControlAct_entryIdleSpeed(&event);
+}
+
 TEST(Behavior, CheckPressedThrottle)
 {
     bool result;
-    Sensor *sensor;
+    Sensor *sensor = (Sensor *)0xdeadbeef;
 
     event.signal = evTick;
 

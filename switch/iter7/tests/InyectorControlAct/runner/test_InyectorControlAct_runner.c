@@ -27,6 +27,9 @@ TEST_GROUP_RUNNER(Behavior)
 {
 	RUN_TEST_CASE(Behavior, SetInitialValuesAfterInit);
 	RUN_TEST_CASE(Behavior, SetDutyTo50ForAWhileOnStart);
+	RUN_TEST_CASE(Behavior, CheckPressedThrottle);
+	RUN_TEST_CASE(Behavior, SetDutyLinearlyWithThrottle);
+	RUN_TEST_CASE(Behavior, IncrementDutyForColdEngine);
 }
 
 /* ------------------------------ End of file ------------------------------ */

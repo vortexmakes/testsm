@@ -52,13 +52,14 @@ TEST_TEAR_DOWN(Structure)
 
 TEST(Structure, DefaultStateAfterInit)
 {
+    InyectorControlAct_init_Expect();
     expectNextState = InyectorControl_init();
     TEST_ASSERT_EQUAL(off, expectNextState);
 }
 
 TEST(Structure, AnUnhandledEventDoesNotChangeState)
 {
-    setProfile(off, UNHANDLED_EVENT, evTick);
+    setProfile(off, UNHANDLED_EVENT, evStartTimeout);
     state = InyectorControl_dispatch(&event);
     TEST_ASSERT_EQUAL(expectNextState, state);
     TEST_ASSERT_EQUAL(off, InyectorControl_getState());
@@ -102,7 +103,7 @@ TEST(Structure, StateTransitionTableForNormal)
     TEST_ASSERT_EQUAL(expectNextState, state);
 
     setProfile(normal, idleSpeed, evTick);
-    InyectorControlAct_isPressed_ExpectAndReturn(&event, false);
+    InyectorControlAct_isPressedThrottle_ExpectAndReturn(&event, false);
     state = InyectorControl_dispatch(&event);
     TEST_ASSERT_EQUAL(expectNextState, state);
 }

@@ -67,10 +67,10 @@ TEST_TEAR_DOWN(Behavior)
 
 TEST(Behavior, SetInitialValuesAfterInit)
 {
-    TempSensor *temp;
-    RPMSensor *rpm;
-    ThrottleSensor *throttle;
-    Timer *tmr;
+    TempSensor *temp = (TempSensor *)0xdeadbeef;
+    RPMSensor *rpm = (RPMSensor *)0xdeadbeef;
+    ThrottleSensor *throttle = (ThrottleSensor *)0xdeadbeef;
+    Timer *tmr = (Timer *)0xdeadbeef;
 
     TempSensor_init_ExpectAndReturn(temp);
     RPMSensor_init_ExpectAndReturn(rpm);
@@ -85,7 +85,7 @@ TEST(Behavior, SetInitialValuesAfterInit)
 
 TEST(Behavior, SetDutyTo50ForAWhileOnStart)
 {
-    Timer *tmr;
+    Timer *tmr = (Timer *)0xdeadbeef;
     event.signal = evStart;
 
     Timer_start_Expect(tmr);
@@ -98,7 +98,7 @@ TEST(Behavior, SetDutyTo50ForAWhileOnStart)
 TEST(Behavior, CheckPressedThrottle)
 {
     bool result;
-    Sensor *sensor;
+    Sensor *sensor = (Sensor *)0xdeadbeef;
 
     event.signal = evTick;
 
@@ -123,7 +123,7 @@ TEST(Behavior, CheckPressedThrottle)
 
 TEST(Behavior, SetDutyLinearlyWithThrottle)
 {
-    Sensor *sensor;
+    Sensor *sensor = (Sensor *)0xdeadbeef;
     int throttleValues[4] = {THROTTLE_MIN + 5, 
                              THROTTLE_MIN + 10,
                              THROTTLE_MIN + 20,
@@ -139,7 +139,7 @@ TEST(Behavior, SetDutyLinearlyWithThrottle)
         Sensor_get_ExpectAndReturn(sensor, *pThrottleValue);
         Sensor_get_IgnoreArg_me();
 
-        Sensor_get_ExpectAndReturn(sensor, 0);   /* Ignore temperature */
+        Sensor_get_ExpectAndReturn(sensor, 90);
         Sensor_get_IgnoreArg_me();
         Sensor_get_ExpectAndReturn(sensor, 0);   /* Ignore RPM */
         Sensor_get_IgnoreArg_me();
@@ -152,7 +152,7 @@ TEST(Behavior, SetDutyLinearlyWithThrottle)
 
 TEST(Behavior, IncrementDutyForColdEngine)
 {
-    Sensor *sensor;
+    Sensor *sensor = (Sensor *)0xdeadbeef;
     unsigned char duty = THROTTLE_MIN + 20;
 
     event.signal = evTick;

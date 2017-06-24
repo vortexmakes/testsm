@@ -36,7 +36,7 @@ static unsigned char duty;
 static Timer *startTmr;
 
 /* ----------------------- Local function prototypes ----------------------- */
-static void
+static int
 calcDutyFromThrottle(int currThrottleVal)
 {
     return currThrottleVal;
@@ -63,8 +63,8 @@ InyectorControlAct_init(void)
 void 
 InyectorControlAct_onIdleSpeed(Event *event)
 {
-    tempVal = Sensor_get(temp);
-    rpmVal = Sensor_get(rpm);
+    tempVal = Sensor_get((Sensor *)temp);
+    rpmVal = Sensor_get((Sensor *)rpm);
 
     duty = RPMControl_compute(rpmVal);
     PWMInyector_setDuty(duty);
@@ -73,8 +73,8 @@ InyectorControlAct_onIdleSpeed(Event *event)
 void 
 InyectorControlAct_onNormal(Event *event)
 {
-    tempVal = Sensor_get(temp);
-    rpmVal = Sensor_get(rpm);
+    tempVal = Sensor_get((Sensor *)temp);
+    rpmVal = Sensor_get((Sensor *)rpm);
 
     duty = calcDutyFromThrottle(throttleVal);
 
@@ -91,14 +91,14 @@ InyectorControlAct_onNormal(Event *event)
 bool 
 InyectorControlAct_isPressedThrottle(Event *event)
 {
-    throttleVal = Sensor_get(throttle);
+    throttleVal = Sensor_get((Sensor *)throttle);
     return throttleVal > THROTTLE_MIN;
 }
 
 bool 
 InyectorControlAct_isReleasedThrottle(Event *event)
 {
-    throttleVal  = Sensor_get(throttle);
+    throttleVal  = Sensor_get((Sensor *)throttle);
     return throttleVal <= THROTTLE_MIN;
 }
 

@@ -42,5 +42,23 @@
     <ClCompile Include="..\..\InyectorControlAct\runner\all_tests.c">
       <Filter>test\runner</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_PWMInyector.c">
+      <Filter>test\stub</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_RPMControl.c">
+      <Filter>test\stub</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_RPMSensor.c">
+      <Filter>test\stub</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_Sensor.c">
+      <Filter>test\stub</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_TempSensor.c">
+      <Filter>test\stub</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_ThrottleSensor.c">
+      <Filter>test\stub</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

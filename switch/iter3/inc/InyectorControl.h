@@ -39,6 +39,8 @@ extern "C" {
 #define ENGINE_MIN_TEMP     70      /* In Celcius */
 
 #define UNHANDLED_EVENT     (-1)
+#define false               0
+#define true                1
 
 /* States */
 enum
@@ -59,6 +61,8 @@ struct Event
     int signal;
 };
  
+typedef int bool;
+
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
 int InyectorControl_init(void);

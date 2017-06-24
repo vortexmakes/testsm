@@ -83,6 +83,12 @@
     <ClCompile Include="..\..\..\src\InyectorControlAct.c" />
     <ClCompile Include="..\..\InyectorControlAct\runner\all_tests.c" />
     <ClCompile Include="..\..\InyectorControlAct\runner\test_InyectorControlAct_runner.c" />
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_PWMInyector.c" />
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_RPMControl.c" />
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_RPMSensor.c" />
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_Sensor.c" />
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_TempSensor.c" />
+    <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_ThrottleSensor.c" />
     <ClCompile Include="..\..\InyectorControlAct\stub\mocks\Mock_Timer.c" />
     <ClCompile Include="..\..\InyectorControlAct\test_InyectorControlAct.c" />
   </ItemGroup>
