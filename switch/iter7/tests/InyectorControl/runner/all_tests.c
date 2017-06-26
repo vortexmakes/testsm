@@ -37,10 +37,16 @@ main(int argc, char *argv[])
     int nArgs;
 
     args[0] = argv[0];
-#if 0
+#if 1
+    /* -v:                  enable/disable verbose */
+    /* -g <group name>:     run the test group */
+    /* -n <name filter>:    filter the test group */
+    /* -r <n-times>:        repeat tests n-times */
     args[1] = "-g";
-    args[2] = "";
-    nArgs = 3;
+    args[2] = "Structure";
+    args[3] = "-r";
+    args[4] = "2";
+    nArgs = 5;
 #else
     nArgs = 1;
 #endif
