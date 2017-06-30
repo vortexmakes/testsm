@@ -1,4 +1,4 @@
-﻿Build started 23/06/2017 14:59:59.
+﻿Build started 30/06/2017 11:22:16.
      1>Project "C:\data\work\projects\testsm\switch\iter1\tests\build\InyectorControlAct\InyectorControlAct.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\data\work\projects\testsm\switch\iter1\tests\build\InyectorControlAct\..\..\..\..\third-party\ceedling\vendor\unity\extras\fixture\src" /I"C:\data\work\projects\testsm\switch\iter1\tests\build\InyectorControlAct\..\..\..\..\third-party\ceedling\vendor\unity\src" /IC:\data\work\projects\testsm\switch\iter1\tests\build\InyectorControlAct\..\ /IC:\data\work\projects\testsm\switch\iter1\tests\build\InyectorControlAct\..\..\InyectorControlAct\stub\mocks /I"C:\data\work\projects\testsm\switch\iter1\tests\build\InyectorControlAct\..\..\..\..\third-party\ceedling\vendor\cmock\src" /IC:\data\work\projects\testsm\switch\iter1\tests\build\InyectorControlAct\..\..\..\inc /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt "..\..\..\..\third-party\ceedling\vendor\cmock\src\cmock.c" "..\..\..\..\third-party\ceedling\vendor\unity\extras\fixture\src\unity_fixture.c" "..\..\..\..\third-party\ceedling\vendor\unity\src\unity.c" ..\..\..\src\InyectorControlAct.c ..\..\InyectorControlAct\runner\all_tests.c ..\..\InyectorControlAct\runner\test_InyectorControlAct_runner.c ..\..\InyectorControlAct\stub\mocks\Mock_Timer.c ..\..\InyectorControlAct\test_InyectorControlAct.c
@@ -25,4 +25,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.27
+Time Elapsed 00:00:00.98
