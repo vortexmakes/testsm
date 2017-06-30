@@ -1,10 +1,21 @@
-﻿Build started 24/06/2017 11:18:04 a.m..
-     1>Project "C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\InyectorControlAct.vcxproj" on node 2 (Build target(s)).
+﻿Build started 30/06/2017 13:08:49.
+     1>Project "C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\InyectorControlAct.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\..\..\..\..\third-party\ceedling\vendor\unity\extras\fixture\src" /I"C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\..\..\..\..\third-party\ceedling\vendor\unity\src" /IC:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\..\ /IC:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\..\..\InyectorControlAct\stub\mocks /I"C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\..\..\..\..\third-party\ceedling\vendor\cmock\src" /IC:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\..\..\..\inc /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\InyectorControlAct\runner\test_InyectorControlAct_runner.c
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\..\..\..\..\third-party\ceedling\vendor\unity\extras\fixture\src" /I"C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\..\..\..\..\third-party\ceedling\vendor\unity\src" /IC:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\..\ /IC:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\..\..\InyectorControlAct\stub\mocks /I"C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\..\..\..\..\third-party\ceedling\vendor\cmock\src" /IC:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\..\..\..\inc /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt "..\..\..\..\third-party\ceedling\vendor\cmock\src\cmock.c" "..\..\..\..\third-party\ceedling\vendor\unity\extras\fixture\src\unity_fixture.c" "..\..\..\..\third-party\ceedling\vendor\unity\src\unity.c" ..\..\..\src\InyectorControlAct.c ..\..\InyectorControlAct\runner\all_tests.c ..\..\InyectorControlAct\runner\test_InyectorControlAct_runner.c ..\..\InyectorControlAct\stub\mocks\Mock_PWMInyector.c ..\..\InyectorControlAct\stub\mocks\Mock_Sensor.c ..\..\InyectorControlAct\stub\mocks\Mock_ThrottleSensor.c ..\..\InyectorControlAct\stub\mocks\Mock_Timer.c ..\..\InyectorControlAct\test_InyectorControlAct.c
+         test_InyectorControlAct.c
+         Mock_Timer.c
+         Mock_ThrottleSensor.c
+         Mock_Sensor.c
+         Mock_PWMInyector.c
          test_InyectorControlAct_runner.c
+         all_tests.c
+         InyectorControlAct.c
+         unity.c
+         unity_fixture.c
+         cmock.c
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\data\work\projects\testsm\switch\iter3\tests\build\Debug\InyectorControlAct.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\data\work\projects\testsm\switch\iter3\tests\build\Debug\InyectorControlAct.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\data\work\projects\testsm\switch\iter3\tests\build\Debug\InyectorControlAct.lib" /MACHINE:X86 Debug\cmock.obj
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\data\work\projects\testsm\switch\iter3\tests\build\Debug\InyectorControlAct.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\data\work\projects\testsm\switch\iter3\tests\build\Debug\InyectorControlAct.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\data\work\projects\testsm\switch\iter3\tests\build\Debug\InyectorControlAct.lib" /MACHINE:X86 Debug\cmock.obj
          Debug\unity_fixture.obj
          Debug\unity.obj
          Debug\InyectorControlAct.obj
@@ -16,8 +27,8 @@
          Debug\Mock_Timer.obj
          Debug\test_InyectorControlAct.obj
          InyectorControlAct.vcxproj -> C:\data\work\projects\testsm\switch\iter3\tests\build\Debug\InyectorControlAct.exe
-     1>Done Building Project "C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\InyectorControlAct.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\InyectorControlAct.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.33
+Time Elapsed 00:00:03.00

@@ -16,9 +16,6 @@ C:\DATA\WORK\PROJECTS\TESTSM\SWITCH\ITER3\TESTS\BUILD\DEBUG\INYECTORCONTROLACT.P
 C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\Debug\all_tests.obj
 C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\Debug\cmock.obj
 C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\Debug\InyectorControlAct.obj
-C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\Debug\Mock_PWMInyector.obj
-C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\Debug\Mock_Sensor.obj
-C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\Debug\Mock_ThrottleSensor.obj
 C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\Debug\Mock_Timer.obj
 C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\Debug\test_InyectorControlAct.obj
 C:\data\work\projects\testsm\switch\iter3\tests\build\InyectorControlAct\Debug\test_InyectorControlAct_runner.obj
